@@ -9,8 +9,6 @@ export default async function bootstrap() {
 
   const app = await NestFactory.create(AppModule);
 
-  const port = 3000;
-
   app.enableCors();
   app.useGlobalPipes(new ValidationPipe());
 
@@ -24,6 +22,7 @@ export default async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   // await app.listen(port, isIpAdress ? ipAddress : 'localhost');
-  await app.listen(port);
+  // await app.listen(port);
+  await app.listen(process.env.PORT);
 }
 bootstrap();
