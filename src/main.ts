@@ -9,8 +9,6 @@ export default async function bootstrap() {
 
   const app = await NestFactory.create(AppModule);
 
-  const isIpAdress = true; // Seu endereço IP local
-  const ipAddress = '192.168.0.70'; // Seu endereço IP local
   const port = 3000;
 
   app.enableCors();

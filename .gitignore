@@ -1,5 +1,4 @@
 # compiled output
-/dist
 /node_modules
 .env
 # Logs
@@ -33,4 +32,6 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.vercel
+
 .vercel
