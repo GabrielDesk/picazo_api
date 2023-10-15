@@ -22,7 +22,7 @@ export default async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   // await app.listen(port, isIpAdress ? ipAddress : 'localhost');
-  await app.listen(80);
-  // await app.listen(process.env.PORT);
+  // await app.listen(port);
+  await app.listen(process.env.PORT);
 }
 bootstrap();
