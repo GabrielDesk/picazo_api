@@ -57,6 +57,7 @@ export declare class PaintConfigService {
     }>, never>, {}, import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {
         _id: import("mongoose").Types.ObjectId;
     }, never>>;
+    findLastPaintByUserId(userId: number): Promise<PaintConfig | null>;
     removePaintConfig(id: number): Promise<import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {
         _id: import("mongoose").Types.ObjectId;
     }, never>> & Omit<import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {

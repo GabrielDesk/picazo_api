@@ -35,6 +35,9 @@ let PaintConfigController = class PaintConfigController {
     removePaintConfig(id) {
         return this.paintConfigService.removePaintConfig(+id);
     }
+    findLastPaintByUserId(userId) {
+        return this.paintConfigService.findLastPaintByUserId(userId);
+    }
 };
 __decorate([
     (0, common_1.Post)('CreatePaintConfig'),
@@ -70,6 +73,13 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], PaintConfigController.prototype, "removePaintConfig", null);
+__decorate([
+    (0, common_1.Get)('LastPaintByUser/:userId'),
+    __param(0, (0, common_1.Param)('userId')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], PaintConfigController.prototype, "findLastPaintByUserId", null);
 PaintConfigController = __decorate([
     (0, common_1.Controller)('paint-config'),
     __metadata("design:paramtypes", [paint_config_service_1.PaintConfigService])

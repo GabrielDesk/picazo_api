@@ -64,4 +64,5 @@ export declare class PaintConfigController {
     }, never> & Required<{
         _id: import("mongoose").Types.ObjectId;
     }>, never>>;
+    findLastPaintByUserId(userId: number): Promise<import("./schemas/paint-config.schema").PaintConfig>;
 }

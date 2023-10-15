@@ -47,6 +47,20 @@ export class PaintConfigService {
     );
   }
 
+  async findLastPaintByUserId(userId: number): Promise<PaintConfig | null> {
+    try {
+      const lastPaint = await this.PaintConfigModel.findOne({ userId }).sort({
+        paintId: 1,
+      }); // Ordena pelo paintId em ordem decrescente
+      // .exec();
+
+      return lastPaint || null;
+    } catch (error) {
+      console.error('Erro ao encontrar a última pintura:', error);
+      throw error;
+    }
+  }
+
   // update(id: number, updatePaintConfigDto: UpdatePaintConfigDto) {
   //   return `This action updates a #${id} paintConfig`;
   // }

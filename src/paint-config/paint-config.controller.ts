@@ -41,12 +41,21 @@ export class PaintConfigController {
   }
 
   // @Patch(':id')
-  // update(@Param('id') id: string, @Body() updatePaintConfigDto: UpdatePaintConfigDto) {
-  //   return this.paintConfigService.update(+id, updatePaintConfigDto);
+  // startPaint(
+  //   @Param('id') id: string,
+  //   @Body() updatePaintConfigDto: UpdatePaintConfigDto,
+  // ) {
+  //   return this.paintConfigService.startPaint(+id, updatePaintConfigDto);
   // }
 
   @Delete(':id')
-  removePaintConfig(@Param('id') id: string) {
+  removePaintConfig(@Param('id') id: number) {
     return this.paintConfigService.removePaintConfig(+id);
+  }
+
+  @Get('LastPaintByUser/:userId') // Use userId como parte da rota
+  findLastPaintByUserId(@Param('userId') userId: number) {
+    // Use 'userId' no decorator @Param
+    return this.paintConfigService.findLastPaintByUserId(userId);
   }
 }

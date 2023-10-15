@@ -42,6 +42,18 @@ let PaintConfigService = class PaintConfigService {
             },
         });
     }
+    async findLastPaintByUserId(userId) {
+        try {
+            const lastPaint = await this.PaintConfigModel.findOne({ userId }).sort({
+                paintId: 1,
+            });
+            return lastPaint || null;
+        }
+        catch (error) {
+            console.error('Erro ao encontrar a última pintura:', error);
+            throw error;
+        }
+    }
     removePaintConfig(id) {
         return this.PaintConfigModel.findOneAndRemove({
             _id: id,
