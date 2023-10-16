@@ -5,8 +5,10 @@ export type PaintConfigDocument = HydratedDocument<PaintConfig>;
 
 @Schema()
 export class PaintConfig {
-  @Prop()
-  paintId: number;
+  @Prop({ type: Number, default: null }) // Modificado para aceitar null
+  paintId: number | null;
+  // @Prop()
+  // paintId: number;
 
   @Prop()
   robotId: number;
@@ -39,7 +41,7 @@ export class PaintConfig {
   plataformToRobot: number;
 
   @Prop()
-  percentStatus?: number = null;
+  percentStatus?: number;
 }
 
 export const PaintConfigSchema = SchemaFactory.createForClass(PaintConfig);

@@ -25,7 +25,7 @@
 import { HydratedDocument } from 'mongoose';
 export type PaintConfigDocument = HydratedDocument<PaintConfig>;
 export declare class PaintConfig {
-    paintId: number;
+    paintId: number | null;
     robotId: number;
     userId: number;
     userName: string;

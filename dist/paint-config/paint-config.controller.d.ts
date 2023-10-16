@@ -57,7 +57,7 @@ export declare class PaintConfigController {
     }>, never>, {}, import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
         _id: import("mongoose").Types.ObjectId;
     }, never>>;
-    removePaintConfig(id: string): Promise<import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
+    removePaintConfig(id: number): Promise<import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
         _id: import("mongoose").Types.ObjectId;
     }, never>> & Omit<import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
         _id: import("mongoose").Types.ObjectId;

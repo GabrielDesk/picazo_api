@@ -12,12 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PaintConfigSchema = exports.PaintConfig = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 let PaintConfig = class PaintConfig {
-    constructor() {
-        this.percentStatus = null;
-    }
 };
 __decorate([
-    (0, mongoose_1.Prop)(),
+    (0, mongoose_1.Prop)({ type: Number, default: null }),
     __metadata("design:type", Number)
 ], PaintConfig.prototype, "paintId", void 0);
 __decorate([
