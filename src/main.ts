@@ -24,5 +24,6 @@ export default async function bootstrap() {
   // await app.listen(port, isIpAdress ? ipAddress : 'localhost');
   // await app.listen(port);
   await app.listen(process.env.PORT);
+  // await app.listen(3000);
 }
 bootstrap();
