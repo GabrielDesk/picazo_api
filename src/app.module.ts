@@ -6,6 +6,7 @@ import { FormModule } from './form/form.module';
 import { ConfigModule } from '@nestjs/config';
 import { RobotModule } from './robot/robot.module';
 import { PaintConfigModule } from './paint-config/paint-config.module';
+import { UsersModule } from './users/users.module';
 
 const configService: ConfigService = new ConfigService();
 
@@ -20,6 +21,7 @@ const configService: ConfigService = new ConfigService();
     FormModule,
     RobotModule,
     PaintConfigModule,
+    UsersModule,
   ],
 })
 export class AppModule {}

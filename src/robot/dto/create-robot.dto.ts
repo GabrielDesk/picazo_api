@@ -88,4 +88,7 @@ export class CreateRobotDto {
   })
   @IsBoolean()
   isActiveRobot: boolean;
+
+  @IsNumber()
+  LastPaintId: number;
 }

@@ -14,6 +14,7 @@ const form_module_1 = require("./form/form.module");
 const config_2 = require("@nestjs/config");
 const robot_module_1 = require("./robot/robot.module");
 const paint_config_module_1 = require("./paint-config/paint-config.module");
+const users_module_1 = require("./users/users.module");
 const configService = new config_1.ConfigService();
 let AppModule = class AppModule {
 };
@@ -27,6 +28,7 @@ AppModule = __decorate([
             form_module_1.FormModule,
             robot_module_1.RobotModule,
             paint_config_module_1.PaintConfigModule,
+            users_module_1.UsersModule,
         ],
     })
 ], AppModule);

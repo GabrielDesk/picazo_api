@@ -11,4 +11,5 @@ export declare class CreateRobotDto {
     passwordRobot: string;
     LastPaintingIds: object;
     isActiveRobot: boolean;
+    LastPaintId: number;
 }

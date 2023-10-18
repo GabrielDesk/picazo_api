@@ -107,5 +107,9 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)
 ], CreateRobotDto.prototype, "isActiveRobot", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], CreateRobotDto.prototype, "LastPaintId", void 0);
 exports.CreateRobotDto = CreateRobotDto;
 //# sourceMappingURL=create-robot.dto.js.map
