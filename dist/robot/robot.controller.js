@@ -42,6 +42,9 @@ let RobotController = class RobotController {
     disactiveRobot(id) {
         return this.robotService.disactiveRobot(+id);
     }
+    updateLastPaintByRobot(updateLastPaintByRobotDTO) {
+        return this.robotService.updateLastPaintByRobot(updateLastPaintByRobotDTO);
+    }
 };
 __decorate([
     (0, common_1.Post)(),
@@ -63,7 +66,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], RobotController.prototype, "findAllRobotsRegistered", null);
 __decorate([
-    (0, common_1.Get)(':id'),
+    (0, common_1.Get)('findOneRobot/:id'),
     (0, swagger_1.ApiOperation)({
         description: 'Método que busca todos os forms do usuário. O parâmetro Id refere-se ao id do usuário firebase.',
     }),
@@ -119,6 +122,13 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], RobotController.prototype, "disactiveRobot", null);
+__decorate([
+    (0, common_1.Post)('updateLastPaint'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], RobotController.prototype, "updateLastPaintByRobot", null);
 RobotController = __decorate([
     (0, swagger_1.ApiTags)('robot'),
     (0, common_1.Controller)('robot'),

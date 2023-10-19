@@ -81,6 +81,15 @@ let RobotService = class RobotService {
             },
         });
     }
+    updateLastPaintByRobot(updateLastPaintByUser) {
+        return this.RobotModel.updateOne({
+            robotId: updateLastPaintByUser.robotId,
+        }, {
+            $set: {
+                lastPaintId: updateLastPaintByUser.lastPaintId,
+            },
+        });
+    }
 };
 RobotService = __decorate([
     (0, common_1.Injectable)(),

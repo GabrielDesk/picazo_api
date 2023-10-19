@@ -90,5 +90,5 @@ export class CreateRobotDto {
   isActiveRobot: boolean;
 
   @IsNumber()
-  LastPaintId: number;
+  lastPaintId: number;
 }

@@ -104,4 +104,20 @@ export class RobotService {
       },
     );
   }
+
+  updateLastPaintByRobot(updateLastPaintByRobot: {
+    robotId: number;
+    lastPaintId: number;
+  }) {
+    return this.RobotModel.updateOne(
+      {
+        robotId: updateLastPaintByRobot.robotId,
+      },
+      {
+        $set: {
+          lastPaintId: updateLastPaintByRobot.lastPaintId,
+        },
+      },
+    );
+  }
 }

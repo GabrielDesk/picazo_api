@@ -35,6 +35,7 @@ export declare class Robot {
     ssidRobot: string;
     passwordRobot: string;
     LastPaintingIds: [];
+    lastPaintId: number;
 }
 export declare const RobotSchema: import("mongoose").Schema<Robot, import("mongoose").Model<Robot, any, any, any, import("mongoose").Document<unknown, any, Robot> & Omit<Robot & {
     _id: import("mongoose").Types.ObjectId;

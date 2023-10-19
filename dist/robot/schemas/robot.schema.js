@@ -53,6 +53,10 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Array)
 ], Robot.prototype, "LastPaintingIds", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], Robot.prototype, "lastPaintId", void 0);
 Robot = __decorate([
     (0, mongoose_1.Schema)()
 ], Robot);

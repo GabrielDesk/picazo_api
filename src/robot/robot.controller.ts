@@ -24,7 +24,7 @@ export class RobotController {
     return this.robotService.findAllRobotsRegistered();
   }
 
-  @Get(':id')
+  @Get('findOneRobot/:id')
   @ApiOperation({
     description:
       'Método que busca todos os forms do usuário. O parâmetro Id refere-se ao id do usuário firebase.',
@@ -83,5 +83,16 @@ export class RobotController {
   @Patch(':id')
   disactiveRobot(@Param('id') id: string) {
     return this.robotService.disactiveRobot(+id);
+  }
+
+  @Post('updateLastPaint')
+  updateLastPaintByRobot(
+    @Body()
+    updateLastPaintByRobotDTO: {
+      robotId: number;
+      lastPaintId: number;
+    },
+  ) {
+    return this.robotService.updateLastPaintByRobot(updateLastPaintByRobotDTO);
   }
 }

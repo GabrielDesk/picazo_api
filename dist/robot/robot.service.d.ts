@@ -105,4 +105,16 @@ export declare class RobotService {
     }>, never>, {}, import("mongoose").Document<unknown, {}, Robot> & Omit<Robot & {
         _id: import("mongoose").Types.ObjectId;
     }, never>>;
+    updateLastPaintByRobot(updateLastPaintByUser: {
+        robotId: number;
+        lastPaintId: number;
+    }): import("mongoose").Query<import("mongodb").UpdateResult, import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, Robot> & Omit<Robot & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>> & Omit<import("mongoose").Document<unknown, {}, Robot> & Omit<Robot & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never> & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, never>, {}, import("mongoose").Document<unknown, {}, Robot> & Omit<Robot & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>>;
 }

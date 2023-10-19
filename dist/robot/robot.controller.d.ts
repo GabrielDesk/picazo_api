@@ -96,4 +96,16 @@ export declare class RobotController {
     }>, never>, {}, import("mongoose").Document<unknown, {}, import("./schemas/robot.schema").Robot> & Omit<import("./schemas/robot.schema").Robot & {
         _id: import("mongoose").Types.ObjectId;
     }, never>>;
+    updateLastPaintByRobot(updateLastPaintByRobotDTO: {
+        robotId: number;
+        lastPaintId: number;
+    }): import("mongoose").Query<import("mongodb").UpdateResult, import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, import("./schemas/robot.schema").Robot> & Omit<import("./schemas/robot.schema").Robot & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>> & Omit<import("mongoose").Document<unknown, {}, import("./schemas/robot.schema").Robot> & Omit<import("./schemas/robot.schema").Robot & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never> & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, never>, {}, import("mongoose").Document<unknown, {}, import("./schemas/robot.schema").Robot> & Omit<import("./schemas/robot.schema").Robot & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>>;
 }

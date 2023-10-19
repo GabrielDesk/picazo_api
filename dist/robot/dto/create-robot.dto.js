@@ -110,6 +110,6 @@ __decorate([
 __decorate([
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
-], CreateRobotDto.prototype, "LastPaintId", void 0);
+], CreateRobotDto.prototype, "lastPaintId", void 0);
 exports.CreateRobotDto = CreateRobotDto;
 //# sourceMappingURL=create-robot.dto.js.map

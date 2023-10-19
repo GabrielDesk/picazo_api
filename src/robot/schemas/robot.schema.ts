@@ -34,6 +34,9 @@ export class Robot {
 
   @Prop()
   LastPaintingIds: [];
+
+  @Prop()
+  lastPaintId: number;
 }
 
 export const RobotSchema = SchemaFactory.createForClass(Robot);
