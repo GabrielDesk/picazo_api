@@ -81,12 +81,12 @@ let RobotService = class RobotService {
             },
         });
     }
-    updateLastPaintByRobot(updateLastPaintByUser) {
+    updateLastPaintByRobot(updateLastPaintByRobot) {
         return this.RobotModel.updateOne({
-            robotId: updateLastPaintByUser.robotId,
+            robotId: updateLastPaintByRobot.robotId,
         }, {
             $set: {
-                lastPaintId: updateLastPaintByUser.lastPaintId,
+                lastPaintId: updateLastPaintByRobot.lastPaintId,
             },
         });
     }

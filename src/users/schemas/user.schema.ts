@@ -5,6 +5,17 @@ import { HydratedDocument } from 'mongoose';
 export type UserDocument = HydratedDocument<User>;
 
 @Schema()
+class Robot {
+  @Prop()
+  robotId: number;
+
+  @Prop()
+  robotName: string;
+}
+
+const RobotSchema = SchemaFactory.createForClass(Robot);
+
+@Schema()
 export class User {
   @Prop()
   userId: number;
@@ -24,10 +35,10 @@ export class User {
   @Prop()
   firstLog: string;
 
-  @Prop([Number]) // Define o tipo de elementos na matriz, nesse caso, números.
-  robotsIds: number[];
+  @Prop([RobotSchema])
+  robots: Robot[];
 
-  @Prop([String]) // Define o tipo de elementos na matriz, nesse caso, strings.
+  @Prop([String])
   histPaint: string[];
 
   @Prop()
