@@ -41,6 +41,30 @@ export declare class PaintConfigController {
     }>, never>, {}, import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
         _id: import("mongoose").Types.ObjectId;
     }, never>>;
+    updatePercentPaintConfig(updatePercentPaintConfigDto: {
+        id: number;
+        percentStatus: number;
+    }): import("mongoose").Query<import("mongodb").UpdateResult, import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>> & Omit<import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never> & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, never>, {}, import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>>;
+    updateProgressPaintConfig(updateProgressPaintConfigDto: {
+        id: number;
+        isAProgressPaint: boolean;
+    }): import("mongoose").Query<import("mongodb").UpdateResult, import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>> & Omit<import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never> & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, never>, {}, import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>>;
     findAllPaints(): Promise<import("./schemas/paint-config.schema").PaintConfig[]>;
     findOnePaintConfig(id: number): import("mongoose").Query<(import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, import("./schemas/paint-config.schema").PaintConfig> & Omit<import("./schemas/paint-config.schema").PaintConfig & {
         _id: import("mongoose").Types.ObjectId;

@@ -26,6 +26,12 @@ let PaintConfigController = class PaintConfigController {
     updateStatePaintConfig(updatePaintConfigDto) {
         return this.paintConfigService.updateStatePaintConfig(updatePaintConfigDto);
     }
+    updatePercentPaintConfig(updatePercentPaintConfigDto) {
+        return this.paintConfigService.updatePercentPaintConfig(updatePercentPaintConfigDto);
+    }
+    updateProgressPaintConfig(updateProgressPaintConfigDto) {
+        return this.paintConfigService.updateProgressPaintConfig(updateProgressPaintConfigDto);
+    }
     findAllPaints() {
         return this.paintConfigService.findAllPaints();
     }
@@ -53,6 +59,20 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], PaintConfigController.prototype, "updateStatePaintConfig", null);
+__decorate([
+    (0, common_1.Post)('UpdatePercentPaintConfig'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], PaintConfigController.prototype, "updatePercentPaintConfig", null);
+__decorate([
+    (0, common_1.Post)('UpdateProgressPaintConfig'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], PaintConfigController.prototype, "updateProgressPaintConfig", null);
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),

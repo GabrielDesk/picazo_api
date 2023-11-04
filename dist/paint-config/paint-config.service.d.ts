@@ -57,6 +57,30 @@ export declare class PaintConfigService {
     }>, never>, {}, import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {
         _id: import("mongoose").Types.ObjectId;
     }, never>>;
+    updatePercentPaintConfig(updatePercentPaintConfigDto: {
+        id: number;
+        percentStatus: number;
+    }): import("mongoose").Query<import("mongodb").UpdateResult, import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>> & Omit<import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never> & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, never>, {}, import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>>;
+    updateProgressPaintConfig(updateProgressPaintConfigDto: {
+        id: number;
+        isAProgressPaint: boolean;
+    }): import("mongoose").Query<import("mongodb").UpdateResult, import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>> & Omit<import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never> & Required<{
+        _id: import("mongoose").Types.ObjectId;
+    }>, never>, {}, import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {
+        _id: import("mongoose").Types.ObjectId;
+    }, never>>;
     findLastPaintByUserId(userId: number): Promise<PaintConfig | null>;
     removePaintConfig(id: number): Promise<import("mongoose").Document<unknown, {}, import("mongoose").Document<unknown, {}, PaintConfig> & Omit<PaintConfig & {
         _id: import("mongoose").Types.ObjectId;

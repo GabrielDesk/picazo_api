@@ -24,6 +24,10 @@
 /// <reference types="mongoose/types/inferschematype" />
 import { HydratedDocument } from 'mongoose';
 export type UserDocument = HydratedDocument<User>;
+declare class Robot {
+    robotId: number;
+    robotName: string;
+}
 export declare class User {
     userId: number;
     userName: string;
@@ -31,7 +35,7 @@ export declare class User {
     userPassword: string;
     userPhotoUri: string;
     firstLog: string;
-    robotsIds: number[];
+    robots: Robot[];
     histPaint: string[];
     lastPaintId: number;
     ssidRobots: string;
@@ -42,3 +46,4 @@ export declare const UserSchema: import("mongoose").Schema<User, import("mongoos
 }, never>, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, User, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<User>> & Omit<import("mongoose").FlatRecord<User> & {
     _id: import("mongoose").Types.ObjectId;
 }, never>>;
+export {};

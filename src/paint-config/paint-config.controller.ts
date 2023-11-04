@@ -30,6 +30,32 @@ export class PaintConfigController {
     return this.paintConfigService.updateStatePaintConfig(updatePaintConfigDto);
   }
 
+  @Post('UpdatePercentPaintConfig')
+  updatePercentPaintConfig(
+    @Body()
+    updatePercentPaintConfigDto: {
+      id: number;
+      percentStatus: number;
+    },
+  ) {
+    return this.paintConfigService.updatePercentPaintConfig(
+      updatePercentPaintConfigDto,
+    );
+  }
+
+  @Post('UpdateProgressPaintConfig')
+  updateProgressPaintConfig(
+    @Body()
+    updateProgressPaintConfigDto: {
+      id: number;
+      isAProgressPaint: boolean;
+    },
+  ) {
+    return this.paintConfigService.updateProgressPaintConfig(
+      updateProgressPaintConfigDto,
+    );
+  }
+
   @Get()
   findAllPaints() {
     return this.paintConfigService.findAllPaints();

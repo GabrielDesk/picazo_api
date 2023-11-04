@@ -47,6 +47,38 @@ export class PaintConfigService {
     );
   }
 
+  updatePercentPaintConfig(updatePercentPaintConfigDto: {
+    id: number;
+    percentStatus: number;
+  }) {
+    return this.PaintConfigModel.updateOne(
+      {
+        paintId: updatePercentPaintConfigDto.id,
+      },
+      {
+        $set: {
+          percentStatus: updatePercentPaintConfigDto.percentStatus,
+        },
+      },
+    );
+  }
+
+  updateProgressPaintConfig(updateProgressPaintConfigDto: {
+    id: number;
+    isAProgressPaint: boolean;
+  }) {
+    return this.PaintConfigModel.updateOne(
+      {
+        paintId: updateProgressPaintConfigDto.id,
+      },
+      {
+        $set: {
+          isAProgressPainting: updateProgressPaintConfigDto.isAProgressPaint,
+        },
+      },
+    );
+  }
+
   async findLastPaintByUserId(userId: number): Promise<PaintConfig | null> {
     try {
       const lastPaint = await this.PaintConfigModel.findOne({ userId }).sort({
